@@ -1,12 +1,370 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>하이도모~</title>
+    <title>유동근 - Frontend Developer</title>
+    <meta name="description" content="7년 경력의 프론트엔드 개발자. React, TypeScript 전문. 포트원, 쿼타랩, TalkToMeInKorean 경력">
+    <meta property="og:title" content="유동근 - Frontend Developer Portfolio">
+    <meta property="og:description" content="빠른 추진력과 집중으로 프로덕트의 비즈니스 임팩트를 만듭니다">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body> 
-    <p>버추얼 크리지에용~</p>
+<body>
+    <!-- Theme Toggle Button -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+        <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+    </button>
+
+    <!-- Scroll Navigation -->
+    <nav class="scroll-nav" aria-label="Page sections">
+        <a href="#experience" class="scroll-nav-dot" data-section="experience" aria-label="Experience">
+            <span class="scroll-nav-label">Experience</span>
+        </a>
+        <a href="#projects" class="scroll-nav-dot" data-section="projects" aria-label="Projects">
+            <span class="scroll-nav-label">Projects</span>
+        </a>
+        <a href="#opensource" class="scroll-nav-dot" data-section="opensource" aria-label="Open Source">
+            <span class="scroll-nav-label">Open Source</span>
+        </a>
+        <a href="#skills" class="scroll-nav-dot" data-section="skills" aria-label="Skills">
+            <span class="scroll-nav-label">Skills</span>
+        </a>
+        <a href="#contact" class="scroll-nav-dot" data-section="contact" aria-label="Contact">
+            <span class="scroll-nav-label">Contact</span>
+        </a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-name">유동근</h1>
+            <p class="hero-role">Frontend Developer</p>
+            <div class="hero-intro">
+                <p>발 빠른 추진력과 집중으로 어떤 일이든 깔끔하게 처리하는 것을 좋아하며, 이를 통한 성취를 추구합니다.</p>
+                <p>프론트엔드가 주력이지만, 필요에 의해 다양한 역할을 맡아 본 경험이 있습니다.</p>
+                <p>현재는 포트원에서 동료의 생산성 그리고 프로덕트의 비즈니스 임팩트를 고민하고 있습니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience section">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <h3>코리아포트원</h3>
+                        <span class="timeline-date">2024.11 - 현재</span>
+                    </div>
+                    <div class="timeline-role">Platform (B2B) Squad / Finance Service</div>
+                    <ul class="timeline-list">
+                        <li>정산금 계산 수식 편집기 UI 제작 (ANTLR 문법 파서 활용)</li>
+                        <li>정산금 계산 수식을 위한 시뮬레이션 폼 개발</li>
+                        <li>정산금 내역서 미리보기 및 이메일 전송 통합 렌더러 서버 개발</li>
+                        <li>도입문의 리뉴얼 및 마케팅 툴 개선</li>
+                    </ul>
+                    <details class="timeline-details" open>
+                        <summary>상세 업무</summary>
+                        <ul class="timeline-list">
+                            <li><strong>정산 계산서 프로젝트:</strong> 수식 입력 및 검증을 위한 편집기 개발. ANTLR 문법 파서를 활용해 브라우저에서 실시간 문법 에러 검출 및 하이라이팅 기능 구현. 시뮬레이션 기능으로 구매 시나리오별 정산금 계산 테스트 지원.</li>
+                            <li><strong>정산 내역서 자동 발송 프로젝트:</strong> react-email과 shadow DOM을 활용하여 미리보기와 이메일 발송 내역서의 일관성 확보. Tailwind CSS 연동 및 @react-email/renderer를 통한 독립 HTML 생성으로 안정적인 이메일 렌더링 구현.</li>
+                            <li><strong>도입문의 Integration (Salesforce):</strong> Salesforce Pardot의 제약을 극복하기 위해 현대적 번들링 에코시스템 기반 POC 진행. 제품군별 명확한 분리를 통해 허수 50% 감소 및 성과 측정 정확도 향상.</li>
+                            <li><strong>도입문의 Integration (Hubspot):</strong> 비용 최적화를 위해 Hubspot으로 전환. 다단계 폼 호환 렌더러 개발로 반복 업데이트 리소스 절감. Internal API 및 공식 API 활용으로 도입문의 프로세스 내재화.</li>
+                        </ul>
+                    </details>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <h3>쿼타랩</h3>
+                        <span class="timeline-date">2023.05 - 2024.10</span>
+                    </div>
+                    <div class="timeline-role">FE Chapter</div>
+                    <p class="timeline-description">Quotabook 프로덕트 개선</p>
+                    <ul class="timeline-list">
+                        <li>react-query 쿼리키 계층 수정을 통한 애플리케이션 안정화</li>
+                        <li>엔터프라이즈 설치형 솔루션 대응</li>
+                        <li>Webpack5 기반 설치형 솔루션 빌드 프로세스 개선 및 yarn berry 마이그레이션</li>
+                        <li>점진적 모노레포 마이그레이션 및 turborepo remote cache 최적화</li>
+                    </ul>
+                    <p class="timeline-description">Quotabook 증권관리 프로덕트 리뉴얼</p>
+                    <ul class="timeline-list">
+                        <li>스톡옵션 V2 행사 계약 처리 과정 전자서명 파트 개발 및 UX 개선</li>
+                        <li>직관적인 전자서명 기능 구현으로 스톡옵션 행사 프로세스 단순화</li>
+                    </ul>
+                    <details class="timeline-details">
+                        <summary>상세 업무</summary>
+                        <ul class="timeline-list">
+                            <li><strong>설치형 엔터프라이즈 대응:</strong> 엔터프라이즈 고객의 온프레미스 배포 요구사항 충족. 서드파티 라이선스 검토 및 MSA 구조 대응을 통한 설치형 솔루션 구현. 엔터프라이즈 플랜별 권한 관리를 위한 가드 컴포넌트 개발.</li>
+                            <li><strong>전자서명 서비스 리뉴얼:</strong> 증권관리 서비스의 전자서명 프로세스 개편. 커스텀 계약 관리 및 표준 서명 프로세스 분리 구현. 템플릿 기반 계약 관리로 반복 작업 최소화. 이메일 기반 서명 요청 및 감사추적 인증서 발급 기능 구현. 멀티 디바이스 환경에서 일관된 사용자 경험 제공.</li>
+                        </ul>
+                    </details>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <h3>지나인 / TalkToMeInKorean</h3>
+                        <span class="timeline-date">2020.06 - 2023.05</span>
+                    </div>
+                    <div class="timeline-role">Developer (150만 회원, 20만+ 활성 유저)</div>
+                    <ul class="timeline-list">
+                        <li>AWS Code 제품군을 이용한 배포 프로세스 작성 및 자동화로 휴먼 에러 감소</li>
+                        <li>Terraform을 이용한 버전 관리 인프라 구축 및 다운타임 최소화</li>
+                        <li>TTMIK: Audio 앱 개발 - React Native 기반 오디오/비디오 플레이어 개발 (Xstate 활용)</li>
+                        <li>레거시 페이지 성능 최적화 (메인 10s→5s, 학습목록 16s→3s)</li>
+                        <li>Webpack5 Module Federation을 활용한 레거시-React 통합 모듈 개발</li>
+                    </ul>
+                    <details class="timeline-details">
+                        <summary>상세 업무</summary>
+                        <ul class="timeline-list">
+                            <li><strong>마이크로 프론트엔드 페이지 바인딩 모듈:</strong> PHP 레거시 환경의 생산성 저하(10초 초기 로딩, 빈번한 랜딩 페이지 교체) 해결을 위한 React 통합 모듈 개발. Webpack Module Federation 기반으로 레거시 시스템에서 React 컴포넌트를 독립 실행 가능한 구조 구현. @island/* 오픈소스 프로젝트의 기반이 됨.</li>
+                            <li><strong>사내 인프라 IaC 및 통합 인증 구조:</strong> Terraform CDK를 활용한 IaC 구성으로 프론트엔드 개발자의 인프라 관리 진입장벽 감소. TypeScript 기반 인프라 코드 작성 환경 구축. 레거시 시스템과 신규 서비스를 연결하는 JWT 기반 통합 인증 중간 서버 개발.</li>
+                            <li><strong>TTMIK: Audio 앱 개발 (Android/iOS):</strong> 100MB+ 오디오 파일 다운로드 불편함 해소를 위한 스트리밍 앱 개발. WordPress 연동, 소셜 로그인(Google/Apple/Facebook), 통합 미디어 플레이어 구현. RN 생태계의 제약으로 자체 오디오/비디오 플레이어 개발 결정. Xstate를 활용한 복잡한 미디어 전환 로직(오디오↔비디오, 전체화면 모드) 안정적 구현. Codepush 기반 핫픽스 배포 및 patch-package를 통한 특정 디바이스 이슈 대응.</li>
+                        </ul>
+                    </details>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <h3>에이소프트</h3>
+                        <span class="timeline-date">2018.01 - 2019.10</span>
+                    </div>
+                    <div class="timeline-role">Developer</div>
+                    <p class="timeline-description">유전자 리포트 관련 관리자 대시보드 개발</p>
+                    <ul class="timeline-list">
+                        <li>Custom light v-dom 렌더러 및 Custom PropTypes 라이브러리 제작</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <h3>파가니코리아</h3>
+                        <span class="timeline-date">2017.05 - 2017.11</span>
+                    </div>
+                    <div class="timeline-role">Developer</div>
+                    <p class="timeline-description">채팅 서비스 개발</p>
+                    <ul class="timeline-list">
+                        <li>node.js, socket.io, jQuery 기반의 채팅 서비스 개발</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <h3>아이아라</h3>
+                        <span class="timeline-date">2017.02 - 2017.05</span>
+                    </div>
+                    <div class="timeline-role">Developer</div>
+                    <p class="timeline-description">AR 서비스 프로토타입 개발</p>
+                    <ul class="timeline-list">
+                        <li>vuforia API를 이용한 증강 현실 앱 프로토타입 제작</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personal Projects Section -->
+    <section id="projects" class="projects section">
+        <div class="container">
+            <h2 class="section-title">Personal Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Tanstack AOP Renderer</h3>
+                        <span class="project-date">2025.04 - 현재</span>
+                    </div>
+                    <p class="project-description">
+                        Tanstack Table의 렌더러를 수평/수직 확장 가능하게 개선한 라이브러리
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Tanstack</span>
+                        <span class="tag">TypeScript</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>@island/*</h3>
+                        <span class="project-date">2022.01 - 2023.06</span>
+                    </div>
+                    <p class="project-description">
+                        Webpack Module Federation 바인딩 툴. Shadow DOM을 통한 CSS 격리 구현
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Webpack5</span>
+                        <span class="tag">Module Federation</span>
+                        <span class="tag">Shadow DOM</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>rolled</h3>
+                        <span class="project-date">2019.12 - 2020.06</span>
+                    </div>
+                    <p class="project-description">
+                        Virtual DOM 라이브러리. React 16.x Hook과 유사한 기능을 제공하는 경량 라이브러리
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Virtual DOM</span>
+                        <span class="tag">Hooks</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Open Source Contributions Section -->
+    <section id="opensource" class="opensource section">
+        <div class="container">
+            <h2 class="section-title">Open Source Contributions</h2>
+            <div class="opensource-grid">
+                <div class="opensource-item">
+                    <h3>Prisma</h3>
+                    <p>Next-generation ORM for Node.js & TypeScript</p>
+                    <a href="https://github.com/prisma/prisma/issues/9553" target="_blank" rel="noopener noreferrer">#9553</a>
+                </div>
+                <div class="opensource-item">
+                    <h3>Terraform CDK</h3>
+                    <p>CDK (Cloud Development Kit) for Terraform</p>
+                    <a href="https://github.com/hashicorp/terraform-cdk/issues/424" target="_blank" rel="noopener noreferrer">#424</a>
+                    <a href="https://github.com/hashicorp/terraform-cdk/issues/419" target="_blank" rel="noopener noreferrer">#419</a>
+                </div>
+                <div class="opensource-item">
+                    <h3>Ant Design</h3>
+                    <p>An enterprise-class UI design language and React UI library</p>
+                    <a href="https://github.com/ant-design/ant-design/issues/25285" target="_blank" rel="noopener noreferrer">#25285</a>
+                </div>
+                <div class="opensource-item">
+                    <h3>node-openvr</h3>
+                    <p>Node.js bindings for OpenVR</p>
+                    <a href="https://github.com/node-xr/node-openvr/pull/8" target="_blank" rel="noopener noreferrer">#8</a>
+                </div>
+                <div class="opensource-item">
+                    <h3>Next.js</h3>
+                    <p>The React Framework for the Web</p>
+                    <a href="https://github.com/vercel/next.js/pull/63910" target="_blank" rel="noopener noreferrer">#63910</a>
+                </div>
+                <div class="opensource-item">
+                    <h3>es-toolkit</h3>
+                    <p>A modern JavaScript utility library</p>
+                    <a href="https://github.com/toss/es-toolkit/pull/177" target="_blank" rel="noopener noreferrer">#177</a>
+                    <a href="https://github.com/toss/es-toolkit/pull/207" target="_blank" rel="noopener noreferrer">#207</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Next.js</span>
+                        <span class="skill-tag">React Native</span>
+                        <span class="skill-tag">HTML/CSS</span>
+                        <span class="skill-tag">Tailwind CSS</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>State Management</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">React Query</span>
+                        <span class="skill-tag">Xstate</span>
+                        <span class="skill-tag">Zustand</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Build Tools</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Webpack5</span>
+                        <span class="skill-tag">Vite</span>
+                        <span class="skill-tag">Turborepo</span>
+                        <span class="skill-tag">Module Federation</span>
+                        <span class="skill-tag">yarn berry</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Backend & Infrastructure</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Terraform</span>
+                        <span class="skill-tag">Docker</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Tools & Libraries</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">ANTLR</span>
+                        <span class="skill-tag">Shadow DOM</span>
+                        <span class="skill-tag">Tanstack Table</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span class="contact-label">Email</span>
+                    <a href="mailto:000as00060@gmail.com">000as00060@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-label">GitHub</span>
+                    <a href="https://github.com/CreeJee" target="_blank" rel="noopener noreferrer">github.com/CreeJee</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-label">LinkedIn</span>
+                    <a href="https://www.linkedin.com/in/creejee/" target="_blank" rel="noopener noreferrer">linkedin.com/in/creejee</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-label">Resume</span>
+                    <a href="유동근 이력서.pdf" download>이력서 다운로드 (PDF)</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 유동근. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
