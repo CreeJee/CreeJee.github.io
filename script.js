@@ -69,3 +69,21 @@ navDots.forEach((dot) => {
 // Listen to scroll events
 window.addEventListener('scroll', updateActiveSection);
 window.addEventListener('load', updateActiveSection);
+
+// ===== Toggle All Details =====
+const toggleAllBtn = document.getElementById('toggle-all-details');
+const allDetails = document.querySelectorAll('.timeline-details');
+
+if (toggleAllBtn && allDetails.length > 0) {
+    let allOpen = false;
+
+    toggleAllBtn.addEventListener('click', () => {
+        allOpen = !allOpen;
+
+        allDetails.forEach((detail) => {
+            detail.open = allOpen;
+        });
+
+        toggleAllBtn.textContent = allOpen ? '모두 접기' : '모두 펼치기';
+    });
+}
