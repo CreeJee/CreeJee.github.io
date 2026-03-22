@@ -35,7 +35,7 @@ Greetings, 쟁취하는 개발자 크리지 입니다.
 지나인은 한국어 플랫폼 서비스 회사로 150만의 회원과 20만명이상의 활성유저를 가지고 있습니다. 
 - Micro Frontend 를 통한 첫 랜딩 페이지를 2배 향상시켯습니다. 이외 결제와 직관되거나 오디오 코스를 듣는것과 같은 핵심적인 기능에 적용되었으며 최소 30퍼부터 2배가까운 성능향상이 있었습니다.
 - AWS code재품군을 통한 CI/CD 구축 및 terraform & cdktf을 이용한 예측및 관리가능한 인프라 시스템 구축했습니다. 특히 인프라에 강하게 엮인 마이크로 프론트엔드를 배포하기에 용이했습니다.
-- FusionAuth및  Keycloak 을 통한 wordpress에서 150만 회원 마이그래이션 POC 하였으며 md5 -> argov 해싱 플러그인을 직접 개발하여 적용하였습니다
+- FusionAuth및  Keycloak 을 통한 wordpress에서 150만 회원 마이그래이션 POC 하였으며 md5 -> argon2 해싱 플러그인을 직접 개발하여 적용하였습니다
 
 
 # Extracurricular Activities
