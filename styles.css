@@ -262,6 +262,56 @@ a, button {
     margin-bottom: 0;
 }
 
+/* ===== Introduce Section ===== */
+.introduce-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.introduce-item h3 {
+    font-size: 20px;
+    color: var(--text-primary);
+    font-weight: 700;
+    margin-bottom: 12px;
+    letter-spacing: -0.01em;
+}
+
+.introduce-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.introduce-list li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+.introduce-list li::before {
+    content: '·';
+    position: absolute;
+    left: 0;
+    color: var(--text-tertiary);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* ===== Footnote ===== */
+.footnote {
+    font-size: 13px;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+
+.footnote sup {
+    color: var(--accent-primary);
+    margin-right: 4px;
+}
+
 /* ===== Experience Section (Timeline) ===== */
 .timeline {
     display: flex;
