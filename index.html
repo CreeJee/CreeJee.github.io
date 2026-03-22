@@ -9,6 +9,7 @@
     <meta property="og:title" content="유동근 - Frontend Developer">
     <meta property="og:description" content="쟁취하는 개발자 크리지 입니다">
     <meta property="og:type" content="website">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -127,7 +128,7 @@
                     <ul class="timeline-list">
                         <li>Micro Frontend 를 통한 첫 랜딩 페이지를 2배 향상시켯습니다. 이외 결제와 직관되거나 오디오 코스를 듣는것과 같은 핵심적인 기능에 적용되었으며 최소 30퍼부터 2배가까운 성능향상이 있었습니다.</li>
                         <li>AWS code재품군을 통한 CI/CD 구축 및 terraform & cdktf을 이용한 예측및 관리가능한 인프라 시스템 구축했습니다. 특히 인프라에 강하게 엮인 마이크로 프론트엔드를 배포하기에 용이했습니다.</li>
-                        <li>FusionAuth및 Keycloak 을 통한 wordpress에서 150만 회원 마이그래이션 POC 하였으며 md5 -> argov 해싱 플러그인을 직접 개발하여 적용하였습니다</li>
+                        <li>FusionAuth및 Keycloak 을 통한 wordpress에서 150만 회원 마이그래이션 POC 하였으며 md5 -> argon2 해싱 플러그인을 직접 개발하여 적용하였습니다</li>
                     </ul>
                 </div>
             </div>
@@ -140,34 +141,14 @@
             <div class="section-header">
                 <h2 class="section-title">Open Source Contributions</h2>
             </div>
-            <div class="opensource-grid">
-                <div class="opensource-item">
-                    <h3>Prisma</h3>
-                    <a href="https://github.com/prisma/prisma/issues/9553" target="_blank" rel="noopener noreferrer">#9553</a>
-                </div>
-                <div class="opensource-item">
-                    <h3>Terraform CDK</h3>
-                    <a href="https://github.com/hashicorp/terraform-cdk/issues/424" target="_blank" rel="noopener noreferrer">#424</a>
-                    <a href="https://github.com/hashicorp/terraform-cdk/issues/419" target="_blank" rel="noopener noreferrer">#419</a>
-                </div>
-                <div class="opensource-item">
-                    <h3>Ant Design</h3>
-                    <a href="https://github.com/ant-design/ant-design/issues/25285" target="_blank" rel="noopener noreferrer">#25285</a>
-                </div>
-                <div class="opensource-item">
-                    <h3>node-openvr</h3>
-                    <a href="https://github.com/node-xr/node-openvr/pull/8" target="_blank" rel="noopener noreferrer">#8</a>
-                </div>
-                <div class="opensource-item">
-                    <h3>Next.js</h3>
-                    <a href="https://github.com/vercel/next.js/pull/63910" target="_blank" rel="noopener noreferrer">#63910</a>
-                </div>
-                <div class="opensource-item">
-                    <h3>es-toolkit</h3>
-                    <a href="https://github.com/toss/es-toolkit/pull/177" target="_blank" rel="noopener noreferrer">#177</a>
-                    <a href="https://github.com/toss/es-toolkit/pull/207" target="_blank" rel="noopener noreferrer">#207</a>
-                </div>
-            </div>
+            <ul class="opensource-inline">
+                <li><span>Prisma</span> <a href="https://github.com/prisma/prisma/issues/9553" target="_blank" rel="noopener noreferrer">#9553</a></li>
+                <li><span>Terraform CDK</span> <a href="https://github.com/hashicorp/terraform-cdk/issues/424" target="_blank" rel="noopener noreferrer">#424</a> <a href="https://github.com/hashicorp/terraform-cdk/issues/419" target="_blank" rel="noopener noreferrer">#419</a></li>
+                <li><span>Ant Design</span> <a href="https://github.com/ant-design/ant-design/issues/25285" target="_blank" rel="noopener noreferrer">#25285</a></li>
+                <li><span>node-openvr</span> <a href="https://github.com/node-xr/node-openvr/pull/8" target="_blank" rel="noopener noreferrer">#8</a></li>
+                <li><span>Next.js</span> <a href="https://github.com/vercel/next.js/pull/63910" target="_blank" rel="noopener noreferrer">#63910</a></li>
+                <li><span>es-toolkit</span> <a href="https://github.com/toss/es-toolkit/pull/177" target="_blank" rel="noopener noreferrer">#177</a> <a href="https://github.com/toss/es-toolkit/pull/207" target="_blank" rel="noopener noreferrer">#207</a></li>
+            </ul>
         </div>
     </section>
 
