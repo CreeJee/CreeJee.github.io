@@ -1,41 +1,57 @@
 {
-  "name": "my-qwik-basic-starter",
-  "description": "Demo app with sample routes",
+  "name": "creejee.github.io",
+  "description": "Resume site of CreeJee",
   "engines": {
     "node": "^18.17.0 || ^20.3.0 || >=21.0.0"
   },
-  "engines-annotation": "Mostly required by sharp which needs a Node-API v9 compatible runtime",
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "11.11.0",
+      "onFail": "download"
+    }
+  },
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "qwik build",
-    "build.client": "vite build",
-    "build.preview": "vite build --ssr src/entry.preview.tsx",
-    "build.types": "tsc --incremental --noEmit",
-    "deploy": "echo 'Run \"npm run qwik add\" to install a server adapter'",
-    "dev": "vite --mode ssr",
-    "dev.debug": "node --inspect-brk ./node_modules/vite/bin/vite.js --mode ssr --force",
-    "fmt": "prettier --write .",
-    "fmt.check": "prettier --check .",
-    "lint": "eslint \"src/**/*.ts*\"",
-    "preview": "qwik build preview && vite preview --open",
-    "start": "vite --open --mode ssr",
-    "qwik": "qwik"
+    "dev": "vp dev",
+    "start": "vp dev --open",
+    "build": "vp build",
+    "preview": "vp preview --open",
+    "typecheck": "tsc --incremental --noEmit",
+    "fmt": "vp fmt .",
+    "fmt.check": "vp fmt --check .",
+    "lint": "vp lint \"src/**/*.ts*\"",
+    "prepare": "vp config"
   },
   "devDependencies": {
-    "@builder.io/qwik": "^1.17.2",
-    "@builder.io/qwik-city": "^1.17.2",
-    "@eslint/js": "latest",
+    "@mdx-js/react": "^3.1.0",
+    "@mdx-js/rollup": "^3.1.0",
+    "@tailwindcss/typography": "^0.5.16",
+    "@tailwindcss/vite": "^4.1.4",
+    "@types/mdx": "^2.0.14",
     "@types/node": "20.19.0",
-    "eslint": "9.32.0",
-    "eslint-plugin-qwik": "^1.17.2",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "@vitejs/plugin-react": "^6.0.3",
+    "class-variance-authority": "0.7.1",
     "globals": "16.4.0",
-    "prettier": "3.6.2",
-    "typescript": "5.4.5",
-    "typescript-eslint": "8.38.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "tailwindcss": "^4.1.4",
+    "tw-animate-css": "1.3.4",
+    "typescript": "5.9.3",
     "typescript-plugin-css-modules": "latest",
     "undici": "*",
-    "vite": "7.1.11",
-    "vite-tsconfig-paths": "^4.2.1"
+    "vite": "catalog:",
+    "vite-plus": "catalog:"
+  },
+  "dependencies": {
+    "@base-ui/react": "^1.6.0",
+    "@fontsource-variable/geist": "^5.2.9",
+    "clsx": "^2.1.1",
+    "lucide-react": "^1.24.0",
+    "shadcn": "^4.13.0",
+    "tailwind-merge": "^3.6.0"
   }
 }

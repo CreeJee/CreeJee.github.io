@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="유동근(CreeJee) — 프론트엔드 엔지니어 이력서"
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="manifest" href="/manifest.json" />
+    <title>유동근 — 이력서</title>
+    <script>
+      // ThemeProvider가 마운트되기 전 첫 페인트에서 다크모드가 번쩍이는 것(FOUC)을 방지
+      var theme = localStorage.getItem("vite-ui-theme");
+      var dark =
+        theme === "dark" ||
+        ((!theme || theme === "system") &&
+          matchMedia("(prefers-color-scheme: dark)").matches);
+      if (dark) document.documentElement.classList.add("dark");
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

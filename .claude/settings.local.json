@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__serena__list_dir",
+      "Bash(vp build *)",
+      "Bash(vp check *)",
+      "Read(//c/Users/CreeJee/Desktop/etc/creejee.github.io/**)",
+      "Bash(node -e \"const p=require\\('./package.json'\\);console.log\\(JSON.stringify\\({deps:p.dependencies,dev:p.devDependencies},null,1\\)\\)\")",
+      "WebFetch(domain:toss.im)",
+      "PowerShell(vp check *)"
+    ]
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": ["serena", "context7", "Framelink Figma MCP"]
+}
