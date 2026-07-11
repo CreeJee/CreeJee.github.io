@@ -14,7 +14,7 @@ import Resume from "./content/resume.mdx";
  * `my-*`(margin-block)를 prose보다 앞에 정렬해 오버라이드가 무효화된다.
  *
  * 간격 스케일 — 제목 위는 넉넉히, 제목 아래는 바짝 붙인다:
- *   h2 40/12 → h3 28/8 → h4 20/6, 본문(p 8 · ul 6 · li 4 · blockquote 10)
+ *   h2 40/12 -> h3 28/8 -> h4 20/6, 본문(p 8 · ul 6 · li 4 · blockquote 10)
  */
 const components: MDXComponents = {
   a: (props) => (

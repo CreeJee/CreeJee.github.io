@@ -1,4 +1,4 @@
-# Drop Qwik → React + MDX Resume Site
+# Drop Qwik -> React + MDX Resume Site
 
 Date: 2026-07-11
 Status: Approved
@@ -45,8 +45,8 @@ Tailwind 4 + daisyUI kept. MDX elements styled via component mapping
 
 ### Deployment
 
-`.github/workflows/deploy.yml`: on push to master → pnpm install → `vp build`
-→ `actions/deploy-pages` publishing `dist/`. User site, so `base: "/"`.
+`.github/workflows/deploy.yml`: on push to master -> pnpm install -> `vp build`
+-> `actions/deploy-pages` publishing `dist/`. User site, so `base: "/"`.
 
 ### Verification
 

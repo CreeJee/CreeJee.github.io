@@ -24,15 +24,15 @@ site is public).
   "B2B products raise customer productivity and move quitting time earlier."
   AEs later relayed customer feedback citing UX advantage.
 - **Admin table abstraction**: sticky cells (left/right/top/bottom), bulk
-  actions, nuqs-based deep links between related records (bulk-payment ID →
+  actions, nuqs-based deep links between related records (bulk-payment ID ->
   its page in a new tab).
 - **Build infra**: Quotabook monorepo attempt failed — 16 tightly-coupled
   domains, manual import-path splitting. At PortOne, revised strategy: split
   into design-system and application monorepos first; unified concurrency
   modules with Turbo, parallelized GitHub Actions, adopted TS 7.0 and tsdown.
-  Build 3min → 50s.
+  Build 3min -> 50s.
 - **React-Query (Quotabook)**: query-key-factory existed per-domain only;
-  backend keyed on `institution` but query keys omitted it → cache bugs.
+  backend keyed on `institution` but query keys omitted it -> cache bugs.
   Fixed across 400+ APIs by cross-checking backend legacy app + microservice
   implementations.
 - **Next.js**: production Page Router experience at Quotabook; upstream PR
@@ -42,14 +42,14 @@ site is public).
 
 ## Structure changes
 
-1. Summary rewritten around: abstraction of complex problems / find→define→
-   propose→execute initiative / business impact; include the "퇴근시간"
+1. Summary rewritten around: abstraction of complex problems / find->define->
+   propose->execute initiative / business impact; include the "퇴근시간"
    philosophy line.
 2. PortOne bullets +4 (standardization, overlay UX, table abstraction, build
-   infra 3min→50s).
+   infra 3min->50s).
 3. Quotabook: concrete react-query story + Next.js (Page Router) named.
 4. Highlights reordered to JD priorities; new highlights ①console
-   standardization ③table abstraction ⑥build-infra failure→success arc;
+   standardization ③table abstraction ⑥build-infra failure->success arc;
    Salesforce+Hubspot merged into one.
 5. Pre-2020 jobs compressed to one line each.
 6. Everything stays in the public site voice — no Toss mention.
