@@ -5,14 +5,6 @@ import mdx from "@mdx-js/rollup";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-  build: {
-    rollupOptions: {
-      input: {
-        main: resolve(import.meta.dirname, "index.html"),
-        compat: resolve(import.meta.dirname, "compat.html"),
-      },
-    },
-  },
   staged: {
     "*": "vp check --fix",
   },
