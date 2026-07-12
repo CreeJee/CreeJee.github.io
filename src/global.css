@@ -14,7 +14,7 @@
   content: none;
 }
 
-/* blockquote는 회사 소개 용도로 사용 — typography의 인용 따옴표/이탤릭을 제거하고 차분한 톤으로 */
+/* blockquote는 회사 소개 용도로 사용 - typography의 인용 따옴표/이탤릭을 제거하고 차분한 톤으로 */
 .prose blockquote {
   font-style: normal;
   font-weight: 400;

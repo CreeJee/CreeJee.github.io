@@ -19,7 +19,7 @@ application (job_id 4076130003).
 ## Design
 
 **Stack**: Vite+ (vp, kept as-is) + React 19 + MDX + Tailwind 4 + daisyUI.
-Rendering: SPA (no prerender — resume is not SEO-critical; avoids further
+Rendering: SPA (no prerender - resume is not SEO-critical; avoids further
 Rolldown-compat tooling risk).
 
 ### Remove
@@ -50,5 +50,5 @@ Tailwind 4 + daisyUI kept. MDX elements styled via component mapping
 
 ### Verification
 
-`vp check`, `vp build` (must pass — Qwik manualChunks root cause is gone),
+`vp check`, `vp build` (must pass - Qwik manualChunks root cause is gone),
 `vp preview` smoke check.

@@ -6,9 +6,9 @@ Status: Approved
 ## Goal
 
 Rewrite `src/content/resume.mdx` so it lands the Toss Insurance frontend JD
-(job_id 4076130003) signals — legacy modernization, abstraction of
+(job_id 4076130003) signals - legacy modernization, abstraction of
 complex/repetitive problems, stability, self-directed problem definition,
-build-infra work, React-Query/Next.js stack — **without naming Toss** (the
+build-infra work, React-Query/Next.js stack - **without naming Toss** (the
 site is public).
 
 ## Interview findings (new material, user's own words)
@@ -26,7 +26,7 @@ site is public).
 - **Admin table abstraction**: sticky cells (left/right/top/bottom), bulk
   actions, nuqs-based deep links between related records (bulk-payment ID ->
   its page in a new tab).
-- **Build infra**: Quotabook monorepo attempt failed — 16 tightly-coupled
+- **Build infra**: Quotabook monorepo attempt failed - 16 tightly-coupled
   domains, manual import-path splitting. At PortOne, revised strategy: split
   into design-system and application monorepos first; unified concurrency
   modules with Turbo, parallelized GitHub Actions, adopted TS 7.0 and tsdown.
@@ -37,7 +37,7 @@ site is public).
   implementations.
 - **Next.js**: production Page Router experience at Quotabook; upstream PR
   fixed webpack `any` typing.
-- **es-toolkit PRs**: low-effort day-one contributions — keep listed, don't
+- **es-toolkit PRs**: low-effort day-one contributions - keep listed, don't
   spotlight.
 
 ## Structure changes
@@ -52,4 +52,4 @@ site is public).
    standardization ③table abstraction ⑥build-infra failure->success arc;
    Salesforce+Hubspot merged into one.
 5. Pre-2020 jobs compressed to one line each.
-6. Everything stays in the public site voice — no Toss mention.
+6. Everything stays in the public site voice - no Toss mention.
