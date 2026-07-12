@@ -4,7 +4,7 @@ import type { MDXComponents } from "mdx/types";
 import Resume from "./content/compat.mdx";
 
 /**
- * 인쇄/PDF 한 페이지 출력을 노린 압축본 — App.tsx와 같은 resume.mdx를 쓰되
+ * 인쇄/PDF 한 페이지 출력을 노린 압축본 — `/?view=compat`으로 진입한다.
  * 간격 스케일만 절반 이하로 조인다. 테마 토글 없이 항상 라이트로 렌더링해
  * 인쇄 결과가 화면과 일치하게 유지한다.
  */
@@ -28,6 +28,8 @@ const components: MDXComponents = {
 export default function CompatApp() {
   return (
     <div className="bg-background text-foreground min-h-screen">
+      {/* 인쇄(PDF 저장) 시 페이지 여백 — 본문 밀도는 아래 유틸리티가 담당 */}
+      <style>{"@page { size: A4; margin: 8mm; }"}</style>
       <MDXProvider components={components}>
         <main className="prose prose-sm mx-auto max-w-4xl px-6 py-6 text-[12px]! leading-snug [&_h2+*]:mt-0! [&_h3+*]:mt-0! [&_h4+*]:mt-0! [&_section]:mt-1!">
           <Resume />
