@@ -3,7 +3,12 @@ import type { MDXComponents } from "mdx/types";
 
 import { ModeToggle } from "@/components/mode-toggle";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Expand, Shrink } from "lucide-react";
+import { parseAsStringLiteral, useQueryState } from "nuqs";
+
+import { Button } from "@/components/ui/button";
 import Resume from "./content/resume.mdx";
+import CompatResume from "./content/compat.mdx";
 
 /**
  * prose 기본 마진이 이력서처럼 짧은 문단·목록 중심 문서에는 과해서,
@@ -34,20 +39,49 @@ const components: MDXComponents = {
   blockquote: (props) => <blockquote {...props} className="my-2.5" />,
 };
 
+function ViewToggle() {
+  const [view, setView] = useViewMode();
+  const isCompat = view === "compat";
+  return (
+    <Button
+      variant="outline"
+      size="icon"
+      aria-label={isCompat ? "전체 이력서 보기" : "압축본 보기"}
+      // null이면 nuqs가 ?view=를 URL에서 지워 기본 뷰로 돌아간다
+      onClick={() => setView(isCompat ? null : "compat")}
+    >
+      {isCompat ? (
+        <Expand className="h-[1.2rem] w-[1.2rem]" />
+      ) : (
+        <Shrink className="h-[1.2rem] w-[1.2rem]" />
+      )}
+    </Button>
+  );
+}
+
 export default function App() {
+  const [view] = useViewMode();
   return (
     <ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
       <div className="bg-background text-foreground min-h-screen">
-        <header className="fixed top-4 right-4 z-10">
+        <header className="fixed top-4 right-4 z-10 flex gap-2 print:hidden">
+          <ViewToggle />
           <ModeToggle />
         </header>
         <MDXProvider components={components}>
           {/* 제목 바로 다음 요소는 mt를 죽여, 제목의 mb만이 제목-아이템 간격을 결정하게 한다 */}
           <main className="prose prose-sm md:prose-base dark:prose-invert mx-auto max-w-4xl px-6 py-12 [&_h2+*]:mt-0! [&_h3+*]:mt-0! [&_h4+*]:mt-0!">
-            <Resume />
+            {view === "compat" ? <CompatResume /> : <Resume />}
           </main>
         </MDXProvider>
       </div>
     </ThemeProvider>
   );
 }
+
+const useViewMode = () => {
+  return useQueryState(
+    "view",
+    parseAsStringLiteral(["default", "compat"]).withDefault("default"),
+  );
+};
