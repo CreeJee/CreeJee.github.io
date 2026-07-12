@@ -6,20 +6,9 @@ LinkedIn: [linkedin.com/in/creejee](https://www.linkedin.com/in/creejee)
 
 ## Summary
 
-<section className="[&_p]:my-0">
-  <p>
-    복잡하고 반복되는 문제를 추상화해 팀의 도구로 만드는 프론트엔드
-    엔지니어입니다.
-  </p>
-  <p>
-    "B2B 제품의 가치는 고객의 생산성을 높여 퇴근시간을 앞당겨주는 것" 이라
-    믿으며,
-  </p>
-  <p>
-    현재 포트원에서 정산 금융 도메인 프로덕트의 사용자 경험과 동료의 생산성을
-    함께 고민하고 있습니다.
-  </p>
-</section>
+복잡하고 반복되는 문제를 추상화해 팀의 도구로 만드는 프론트엔드 엔지니어입니다.\
+"B2B 제품의 가치는 고객의 생산성을 높여 퇴근시간을 앞당겨주는 것" 이라 믿으며,\
+현재 포트원에서 정산 금융 도메인 프로덕트의 사용자 경험과 동료의 생산성을 함께 고민하고 있습니다.
 
 ## Work Experiences
 
@@ -73,187 +62,90 @@ LinkedIn: [linkedin.com/in/creejee](https://www.linkedin.com/in/creejee)
 
 #### 1. 정산 계산 수식 편집기와 시뮬레이션
 
-<section className="[&_p]:my-0">
-
-계산 수식 입력과 검토를 편하게 하기 위한 수식 편집기를 개발했습니다.
-
-개발자가 IDE를 쓰듯 편하게 입력할 방법을 고민하다, lexical 을 이용한 문서 편집 기능 과 antlr 문법 파서 로직을 서버와 공유하여
-
+계산 수식 입력과 검토를 편하게 하기 위한 수식 편집기를 개발했습니다.\
+개발자가 IDE를 쓰듯 편하게 입력할 방법을 고민하다, lexical 을 이용한 문서 편집 기능 과 antlr 문법 파서 로직을 서버와 공유하여\
 브라우저에서 문법 에러를 미리 검출하고 에러 위치를 하이라이팅하는 기능을 넣었습니다.
 
-</section>
-
-<section className="[&_p]:my-0 mt-2">
-
-이 수식은 수십 개 플랫폼 고객사가 수천 명의 파트너에게 지급하는 정산금을 결정짓는 기능이며,
-
+이 수식은 수십 개 플랫폼 고객사가 수천 명의 파트너에게 지급하는 정산금을 결정짓는 기능이며,\
 비개발자도 다룰 수 있는 완성도로 엔터프라이즈 딜 수주에 기여했습니다.
 
-</section>
-
-<section className="[&_p]:my-0 mt-2">
-
-파서 평가 로직에는 단위 테스트를, 수식 입력부터 계산 결과까지의 흐름에는 E2E 테스트를 두어 회귀를 방지했고,
-
+파서 평가 로직에는 단위 테스트를, 수식 입력부터 계산 결과까지의 흐름에는 E2E 테스트를 두어 회귀를 방지했고,\
 시뮬레이션 기능을 통해 "어떤 상품을 구매하면 정산금이 얼마가 되는지" 를 사용자도 직접 검증할 수 있게 했습니다.
-
-</section>
 
 #### 2. 어드민 테이블 뷰 추상화
 
-<section className="[&_p]:my-0">
-
-정산 어드민은 대량의 데이터를 안정적으로 다뤄야 하는 만큼 테이블의 완성도가 중요합니다.
-
-왼쪽 오른쪽 상단 하단이 고정되는 sticky cell, 컬럼 숨김과 순서 조정, 도메인별 formatted cell,
-
-선택 기반 일괄 작업, 그리고 nuqs 기반 URL 상태 연동까지 갖춘 테이블 뷰로 추상화했으며,
-
+정산 어드민은 대량의 데이터를 안정적으로 다뤄야 하는 만큼 테이블의 완성도가 중요합니다.\
+왼쪽 오른쪽 상단 하단이 고정되는 sticky cell, 컬럼 숨김과 순서 조정, 도메인별 formatted cell,\
+선택 기반 일괄 작업, 그리고 nuqs 기반 URL 상태 연동까지 갖춘 테이블 뷰로 추상화했으며,\
 연관된 정보는 링크로 연결하여 운영자가 화면을 오가며 대조하는 비용을 줄였습니다.
-
-</section>
 
 #### 3. 정산 내역서 자동 발송
 
-<section className="[&_p]:my-0">
-
-이메일 시스템을 구축하기 어려운 소규모 플랫폼사의 운영 공백을 해소하기 위해 만들었으며,
-
+이메일 시스템을 구축하기 어려운 소규모 플랫폼사의 운영 공백을 해소하기 위해 만들었으며,\
 "미리보기는 이메일로 발송되는 내역서와 일치해야 한다" 는 제약이 있었습니다.
 
-</section>
-
-<section className="[&_p]:my-0 mt-2">
-
-react-email은 사내에서 쓰는 tailwind와 연동이 좋고 `@react-email/renderer`로 독립된 html을 만들 수 있어 채택 되었으며,
-
+react-email은 사내에서 쓰는 tailwind와 연동이 좋고 `@react-email/renderer`로 독립된 html을 만들 수 있어 채택 되었으며,\
 이메일 마크업 특유의 inline 스타일이 이미 마운트된 리액트 트리에 영향을 주지 않도록 `shadow DOM`으로 격리했습니다.
-
-</section>
 
 #### 4. 도입문의 통합 (Salesforce -> Hubspot)
 
-<section className="[&_p]:my-0">
-
-Salesforce가 제공하는 제한적인 폼의 한계로 form 하나를 고치는 데 며칠이 걸리고,
-
+Salesforce가 제공하는 제한적인 폼의 한계로 form 하나를 고치는 데 며칠이 걸리고,\
 문의가 일괄 전송되어 CS 리소스가 소모되고 있었습니다.
 
-</section>
-
-<section className="[&_p]:my-0 mt-2">
-
-"번들링과 현대화된 에코시스템으로 UX를 압도적으로 올릴 수 있다면" 이라는 가설로 POC를 진행해
-
-[기존 도입문의](https://go.portone.io/l/1047343/2023-11-27/6rv) 대비 [새 도입문의](https://go.portone.io/inquiry-opi)에서 제품군을 명확히 분리, 허수 문의 50%를 덜어냈습니다.
-
+"번들링과 현대화된 에코시스템으로 UX를 압도적으로 올릴 수 있다면" 이라는 가설로 POC를 진행해\
+[기존 도입문의](https://go.portone.io/l/1047343/2023-11-27/6rv) 대비 [새 도입문의](https://go.portone.io/inquiry-opi)에서 제품군을 명확히 분리, 허수 문의 50%를 덜어냈습니다.\
 리뉴얼 이후 도입문의는 20% 이상 늘었습니다.
 
-</section>
-
-<section className="[&_p]:my-0 mt-2">
-
-이후 라이센스 비용 문제로 Hubspot 전환이 결정되자,
-
+이후 라이센스 비용 문제로 Hubspot 전환이 결정되자,\
 매번 바뀌는 폼에 리소스가 들어가지 않도록 다단계 hubspot form 호환 렌더러를 만들어 도입문의를 내재화했습니다.
-
-</section>
 
 #### 5. 콘솔 인터페이스 표준화
 
-<section className="[&_p]:my-0">
-
-입사 당시 콘솔 공통 컴포넌트는 controlled/uncontrolled의 경계 없이 저마다 다른 이름으로 구현되어 있었고, 화면마다 폼을 다루는 방식이 달랐습니다.
-
-쿼타랩에서 복잡한 로직의 폼을 다뤄본 경험으로 인터페이스 표준화가 선행 과제라 판단했고,
-
+입사 당시 콘솔 공통 컴포넌트는 controlled/uncontrolled의 경계 없이 저마다 다른 이름으로 구현되어 있었고, 화면마다 폼을 다루는 방식이 달랐습니다.\
+쿼타랩에서 복잡한 로직의 폼을 다뤄본 경험으로 인터페이스 표준화가 선행 과제라 판단했고,\
 `value` / `onChange` / `defaultValue`로 통일하는 작업을 주도해 팀의 폼 개발 컨벤션으로 정착시켰습니다.
-
-</section>
 
 같은 기준으로, 상품 이름 가격 부가세 등 20개가 넘는 입력을 다루는 정산 수식 화면부터 편집 중인 내용이 경고 없이 사라지지 않도록 이탈 보호를 콘솔 전반에 일괄 적용했습니다.
 
-<section className="[&_p]:my-0 mt-2">
-
-작업 이후 AE를 통해 고객사로부터 사용자 경험이 강점이라는 이야기를 들었으며,
-
+작업 이후 AE를 통해 고객사로부터 사용자 경험이 강점이라는 이야기를 들었으며,\
 일관된 폼 작성 방식으로 인지부하가 줄어 유사한 복잡도의 폼을 만드는 시간이 절반 이하로 단축되었습니다.
-
-</section>
 
 ### [지나인(G9)](https://www.rocketpunch.com/companies/g9)
 
 #### 1. 마이크로 프론트엔드 페이지 바인딩 모듈 - 레거시의 점진적 전환
 
-<section className="[&_p]:my-0">
-
-톡투미인코리안은 잦은 프로모션으로 랜딩 페이지를 주기적으로 바꾸는데,
-
-레거시 환경은 생산성과 디버깅 모두 한계였고 첫 로딩에 10초 가까이 걸렸습니다.
-
+톡투미인코리안은 잦은 프로모션으로 랜딩 페이지를 주기적으로 바꾸는데,\
+레거시 환경은 생산성과 디버깅 모두 한계였고 첫 로딩에 10초 가까이 걸렸습니다.\
 레거시를 한 번에 갈아엎는 대신, React 앱을 기존 프로덕트에 부분적으로 띄울 수 있는 모듈을 만들어 서비스 중단 없이 화면 단위로 전환했습니다.
 
-</section>
-
-<section className="[&_p]:my-0 mt-2">
-
-[메인페이지](https://talktomeinkorean.com/)는 실제로 2개의 리액트 앱([landing-app](https://landing-app.talktomeinkorean.com/), [notification](https://notification.talktomeinkorean.com))이 함께 뜨는 사이트입니다.
-
+[메인페이지](https://talktomeinkorean.com/)는 실제로 2개의 리액트 앱([landing-app](https://landing-app.talktomeinkorean.com/), [notification](https://notification.talktomeinkorean.com))이 함께 뜨는 사이트입니다.\
 이 작업은 @island/\* 프로젝트의 초석이 되었으며, 기술 상세는 [노션 페이지](https://www.notion.so/creejee/webpack-module-federation-iframe-4974e1dc690d4f1f8fb868906dd40cd8?pvs=4)에 있습니다.
-
-</section>
 
 #### 2. 사내 인프라 IaC 및 통합 인증
 
-<section className="[&_p]:my-0">
-
 [Terraform CDK](https://www.cdk.tf/)로 IaC를 구성하고, 레거시 프로덕트 인증 중간 서버와 JWT 기반 통합 인증을 구현했습니다.
-
-</section>
-
-<section className="[&_p]:my-0 mt-2">
 
 워드프레스에 묶여 있던 150만 회원 계정의 인증 이관을 위해 FusionAuth/Keycloak 기반 마이그레이션 POC를 진행했고, md5 해시를 argon2로 전환하는 해싱 플러그인을 개발했습니다.
 
-</section>
-
 #### 3. TTMIK: Audio 개발 ([Android](https://play.google.com/store/apps/details?id=com.talktomeinkorean.media_app&hl=ko&gl=US) / [iOS](https://apps.apple.com/us/app/ttmik-audio/id1573217831))
 
-<section className="[&_p]:my-0">
-
-100M 이상의 오디오 파일을 통째로 받아야 했던 학습 경험을 개선하기 위해 만든 RN 앱입니다.
-
+100M 이상의 오디오 파일을 통째로 받아야 했던 학습 경험을 개선하기 위해 만든 RN 앱입니다.\
 react-native-track-player/react-native-video 를 통해 만들었습니다
-
-</section>
 
 ## Personal Projects
 
 ### [Tanstack AOP Renderer](https://github.com/CreeJee/tanstack-aop-renderer/blob/main/README.ko.md) <span className="text-muted-foreground text-base font-normal">2025.04 - 2026.01 JS/TS</span>
 
-<section className="[&_p]:my-0">
-
-tanstack table은 headless한 로직 작성을 도와주지만, table renderer는 여전히 한 파일에 강하게 응집되어야 하는 부분에 의구심이 생겨 만들게 되었습니다.
-
+tanstack table은 headless한 로직 작성을 도와주지만, table renderer는 여전히 한 파일에 강하게 응집되어야 하는 부분에 의구심이 생겨 만들게 되었습니다.\
 테이블 선언을 지연시켜 단일 파일이 아닌 수평 수직 확장을 가능하게 하는 것이 목표입니다.
-
-</section>
 
 ### [@island/\*](https://github.com/CreeJee/island-micro-frontend-webpack-structure) <span className="text-muted-foreground text-base font-normal">2022.01 - 2023.06 JS/TS</span>
 
-<section className="[&_p]:my-0">
-
 module-federation 기반으로 만들어졌으며 함수 한 번의 실행으로 리액트 컴포넌트를 DOM에 마운트할 수 있으며, shadow-dom 기반 css 격리와 @font-face 이슈 해결을 제공합니다.
-
-</section>
 
 ### [rolled](https://github.com/CreeJee/rolled/tree/reconcileHook) <span className="text-muted-foreground text-base font-normal">2019.12 - 2020.06 JS/TS</span>
 
-<section className="[&_p]:my-0">
-
 React와 virtual dom의 동작 원리를 이해하기 위해 bottom-up 방식으로 stage0 기반 vdom 라이브러리를 만들었습니다.
-
-</section>
 
 ## Extracurricular Activities
 
